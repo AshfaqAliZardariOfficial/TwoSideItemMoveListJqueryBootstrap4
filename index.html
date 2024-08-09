@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two Side Item Move List</title>
+</head>
+
+<body>
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+      .list-max-height {
+        height: 44em;
+      }
+
+      .bg-success-tbl {
+        background-color: #8fd19e !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-fluid p-4">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="sel1">Select Role:</label>
+            <select class="form-control" id="RoleId">
+              <option>Admin</option>
+              <option>Support</option>
+              <option>User</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+      </div>
+
+      <div class="bg-light p-4">
+        <div class="row">
+          <div class="col-md-5 overflow-auto">
+            <div class="row mb-2">
+              <div class="col-md-8">
+                <h4>Inactive Role Rights List</h4>
+              </div>
+              <div class="col-md-4"></div>
+            </div>
+            <div id="InactiveRoleRightListAccordion" class="overflow-auto list-max-height">
+              <div class="card">
+                <div class="card-header">
+                  <input type="checkbox" onchange="toggleChildCheckboxes(this)">
+                  <a class="card-link" data-toggle="collapse" href="#collapseOneInactive">
+                    <span class="pl-1">Parent Role Right 1</span>
+                  </a>
+                </div>
+                <div id="collapseOneInactive" class="collapse show">
+                  <div class="card-body">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>Child Role Right Name</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 1</td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 2</td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 3</td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 4</td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 5</td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 6</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <input type="checkbox" onchange="toggleChildCheckboxes(this)">
+                  <a class="card-link" data-toggle="collapse" href="#collapseTwoInactive">
+                    <span class="pl-1">Parent Role Right 2</span>
+                  </a>
+                </div>
+                <div id="collapseTwoInactive" class="collapse show">
+                  <div class="card-body">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>Child Role Right Name</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 1</td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 2</td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 3</td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 4</td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 5</td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 6</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <input type="checkbox" onchange="toggleChildCheckboxes(this)">
+                  <a class="card-link" data-toggle="collapse" href="#collapseThreeInactive">
+                    <span class="pl-1">Parent Role Right 3</span>
+                  </a>
+                </div>
+                <div id="collapseThreeInactive" class="collapse show">
+                  <div class="card-body">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>Child Role Right Name</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 1</td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 2</td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 3</td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 4</td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 5</td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 6</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 text-center">
+            <ul class="list-group list-group-flush d-flex h-100 justify-content-center align-self-center">
+              <li class="list-group-item bg-light" title="Move all right side"><button class="btn btn-info w-50"
+                  onclick="MoveAllParentChildRightSide(this)">&gt;&gt;</button></li>
+              <li class="list-group-item bg-light" title="Move selected right side"><button class="btn btn-info w-50"
+                  onclick="MoveSeletedParentChildRightSide()"> &gt; </button></li>
+              <li class="list-group-item bg-light" title="Move selected left side"><button class="btn btn-info w-50"
+                  onclick="MoveSelectedParentChildLeftSide()"> &lt; </button></li>
+              <li class="list-group-item bg-light" title="Move all left side"><button class="btn btn-info w-50"
+                  onclick="MoveAllParentChildLeftSide(this)">&lt;&lt;</button></li>
+              <!-- <li class="list-group-item bg-light"><button class="btn btn-primary w-50">Reload</button></li> -->
+            </ul>
+          </div>
+          <div class="col-md-5 overflow-auto">
+            <div class="row mb-2">
+              <div class="col-md-8">
+                <h4>Active Role Rights List</h4>
+              </div>
+              <div class="col-md-4">
+                <div class="text-right">
+                  <button type="button" class="btn btn-success btn-sm">Save Changes</button>
+                </div>
+              </div>
+            </div>
+            <div id="ActiveRoleRightListAccordion" class="overflow-auto list-max-height">
+              <div class="card">
+                <div class="card-header bg-success">
+                  <input type="checkbox" onchange="toggleChildCheckboxes(this)">
+                  <a class="card-link" data-toggle="collapse" href="#collapseOneActive">
+                    <span class="pl-1 text-white">Parent Role Right 1</span>
+                  </a>
+                </div>
+                <div id="collapseOneActive" class="collapse show">
+                  <div class="card-body bg-success-tbl">
+                    <table class="table table-hover table-success">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>Child Role Right Name</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 1</td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 2</td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 3</td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 4</td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 5</td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 6</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header bg-success">
+                  <input type="checkbox" onchange="toggleChildCheckboxes(this)">
+                  <a class="card-link" data-toggle="collapse" href="#collapseTwoActive">
+                    <span class="pl-1 text-white">Parent Role Right 2</span>
+                  </a>
+                </div>
+                <div id="collapseTwoActive" class="collapse show">
+                  <div class="card-body bg-success-tbl">
+                    <table class="table table-hover table-success">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>Child Role Right Name</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 1</td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 2</td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 3</td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 4</td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 5</td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 6</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header bg-success">
+                  <input type="checkbox" onchange="toggleChildCheckboxes(this)">
+                  <a class="card-link" data-toggle="collapse" href="#collapseThreeActive">
+                    <span class="pl-1 text-white">Parent Role Right 3</span>
+                  </a>
+                </div>
+                <div id="collapseThreeActive" class="collapse show">
+                  <div class="card-body bg-success-tbl">
+                    <table class="table table-hover table-success">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>Child Role Right Name</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 1</td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 2</td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 3</td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 4</td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 5</td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Child Role Right 6</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      // Toggle checkboxes.
+      function toggleChildCheckboxes(parentCheckbox) {
+        // Check the state of the parent checkbox
+        var isChecked = $(parentCheckbox).is(':checked');
+
+        // Find the closest card and then the collapse div within that card
+        var $collapseDiv = $(parentCheckbox).closest('.card').find('.collapse');
+
+        // Find all checkboxes within the collapse div and set their checked state
+        $collapseDiv.find('input[type="checkbox"]').prop('checked', isChecked);
+      }
+
+      // Move all items from Inactive to Active
+      function MoveAllParentChildRightSide(button) {
+        // Select all child items from inactive list
+        $('#InactiveRoleRightListAccordion .card').each(function () {
+          var $collapseDiv = $(this).find('.collapse');
+          var $childCheckboxes = $collapseDiv.find('input[type="checkbox"]');
+
+          // Move all items
+          $childCheckboxes.each(function () {
+            $(this).prop('checked', true);
+            $(this).closest('.card').appendTo('#ActiveRoleRightListAccordion');
+          });
+        });
+      }
+
+      // Move all items from Active to Inactive
+      function MoveAllParentChildLeftSide(button) {
+        // Select all child items from active list
+        $('#ActiveRoleRightListAccordion .card').each(function () {
+          var $collapseDiv = $(this).find('.collapse');
+          var $childCheckboxes = $collapseDiv.find('input[type="checkbox"]');
+
+          // Move all items
+          $childCheckboxes.each(function () {
+            $(this).prop('checked', false);
+            $(this).closest('.card').appendTo('#InactiveRoleRightListAccordion');
+          });
+        });
+      }
+
+
+
+
+      //     function MoveSeletedParentChildRightSide() {
+      //   $('#InactiveRoleRightListAccordion .card').each(function() {
+      //     var $card = $(this);
+      //     var $collapseDiv = $card.find('.collapse');
+      //     var $selectedCheckboxes = $collapseDiv.find('input[type="checkbox"]:checked');
+
+      //     if ($selectedCheckboxes.length > 0) {
+      //       var $newCard = $('<div class="card"></div>');
+      //       var $header = $card.find('.card-header').clone();
+      //       var $body = $('<div class="collapse show"><div class="card-body"></div></div>');
+      //       var $table = $('<table class="table table-hover"><thead><tr><th></th><th>Child Role Right Name</th></tr></thead><tbody></tbody></table>');
+
+      //       // Clone and configure the header
+      //       $header.find('input[type="checkbox"]').prop('checked', false);
+      //       var newCardId = 'collapseNew' + Math.floor(Math.random() * 1000);
+      //       $header.find('a').attr('href', '#' + newCardId);
+
+      //       // Add header and body to new card
+      //       $newCard.append($header).append($body);
+      //       $body.find('.card-body').append($table);
+
+      //       // Move selected rows
+      //       $selectedCheckboxes.closest('tr').appendTo($table.find('tbody'));
+
+      //       // Add new card to Active Role Rights List
+      //       $('#ActiveRoleRightListAccordion').append($newCard);
+
+      //       // Remove parent card if no child rows left
+      //       if ($card.find('tbody tr').length === 0) {
+      //         $card.remove();
+      //       }
+      //     }
+      //   });
+      // }
+
+      // function MoveSelectedParentChildLeftSide() {
+      //   $('#ActiveRoleRightListAccordion .card').each(function() {
+      //     var $card = $(this);
+      //     var $collapseDiv = $card.find('.collapse');
+      //     var $selectedCheckboxes = $collapseDiv.find('input[type="checkbox"]:checked');
+
+      //     if ($selectedCheckboxes.length > 0) {
+      //       var $newCard = $('<div class="card"></div>');
+      //       var $header = $card.find('.card-header').clone();
+      //       var $body = $('<div class="collapse show"><div class="card-body"></div></div>');
+      //       var $table = $('<table class="table table-hover"><thead><tr><th></th><th>Child Role Right Name</th></tr></thead><tbody></tbody></table>');
+
+      //       // Clone and configure the header
+      //       $header.find('input[type="checkbox"]').prop('checked', false);
+      //       var newCardId = 'collapseNew' + Math.floor(Math.random() * 1000);
+      //       $header.find('a').attr('href', '#' + newCardId);
+
+      //       // Add header and body to new card
+      //       $newCard.append($header).append($body);
+      //       $body.find('.card-body').append($table);
+
+      //       // Move selected rows
+      //       $selectedCheckboxes.closest('tr').appendTo($table.find('tbody'));
+
+      //       // Add new card to Inactive Role Rights List
+      //       $('#InactiveRoleRightListAccordion').append($newCard);
+
+      //       // Remove parent card if no child rows left
+      //       if ($card.find('tbody tr').length === 0) {
+      //         $card.remove();
+      //       }
+      //     }
+      //   });
+      // }
+
+
+
+      function MoveSeletedParentChildRightSide() {
+        $('#InactiveRoleRightListAccordion .card').each(function () {
+          var $card = $(this);
+          var $collapseDiv = $card.find('.collapse');
+          var $selectedCheckboxes = $collapseDiv.find('input[type="checkbox"]:checked');
+
+          if ($selectedCheckboxes.length > 0) {
+            // Get the parent card's header text to find if the parent already exists in the Active list
+            var parentHeaderText = $card.find('.card-header span').text().trim();
+
+            // Check if the parent exists in the Active list
+            var $existingParent = $('#ActiveRoleRightListAccordion .card').filter(function () {
+              return $(this).find('.card-header span').text().trim() === parentHeaderText;
+            });
+
+            if ($existingParent.length > 0) {
+              // Append selected rows to existing parent
+              var $existingTableBody = $existingParent.find('.collapse .card-body table tbody');
+              $selectedCheckboxes.closest('tr').appendTo($existingTableBody);
+            } else {
+              // Create a new card if parent does not exist
+              var $newCard = $('<div class="card"></div>');
+              var $header = $card.find('.card-header').clone();
+              var $body = $('<div class="collapse show"><div class="card-body"></div></div>');
+              var $table = $('<table class="table table-hover"><thead><tr><th></th><th>Child Role Right Name</th></tr></thead><tbody></tbody></table>');
+
+              // Clone and configure the header
+              $header.find('input[type="checkbox"]').prop('checked', false);
+              var newCardId = 'collapseNew' + Math.floor(Math.random() * 1000);
+              $header.find('a').attr('href', '#' + newCardId);
+
+              // Add header and body to new card
+              $newCard.append($header).append($body);
+              $body.find('.card-body').append($table);
+
+              // Move selected rows
+              $selectedCheckboxes.closest('tr').appendTo($table.find('tbody'));
+
+              // Add new card to Active Role Rights List
+              $('#ActiveRoleRightListAccordion').append($newCard);
+            }
+
+            // Remove parent card if no child rows left
+            if ($card.find('tbody tr').length === 0) {
+              $card.remove();
+            }
+          }
+        });
+      }
+
+      function MoveSelectedParentChildLeftSide() {
+        $('#ActiveRoleRightListAccordion .card').each(function () {
+          var $card = $(this);
+          var $collapseDiv = $card.find('.collapse');
+          var $selectedCheckboxes = $collapseDiv.find('input[type="checkbox"]:checked');
+
+          if ($selectedCheckboxes.length > 0) {
+            // Get the parent card's header text to find if the parent already exists in the Inactive list
+            var parentHeaderText = $card.find('.card-header span').text().trim();
+
+            // Check if the parent exists in the Inactive list
+            var $existingParent = $('#InactiveRoleRightListAccordion .card').filter(function () {
+              return $(this).find('.card-header span').text().trim() === parentHeaderText;
+            });
+
+            if ($existingParent.length > 0) {
+              // Append selected rows to existing parent
+              var $existingTableBody = $existingParent.find('.collapse .card-body table tbody');
+              $selectedCheckboxes.closest('tr').appendTo($existingTableBody);
+            } else {
+              // Create a new card if parent does not exist
+              var $newCard = $('<div class="card"></div>');
+              var $header = $card.find('.card-header').clone();
+              var $body = $('<div class="collapse show"><div class="card-body"></div></div>');
+              var $table = $('<table class="table table-hover"><thead><tr><th></th><th>Child Role Right Name</th></tr></thead><tbody></tbody></table>');
+
+              // Clone and configure the header
+              $header.find('input[type="checkbox"]').prop('checked', false);
+              var newCardId = 'collapseNew' + Math.floor(Math.random() * 1000);
+              $header.find('a').attr('href', '#' + newCardId);
+
+              // Add header and body to new card
+              $newCard.append($header).append($body);
+              $body.find('.card-body').append($table);
+
+              // Move selected rows
+              $selectedCheckboxes.closest('tr').appendTo($table.find('tbody'));
+
+              // Add new card to Inactive Role Rights List
+              $('#InactiveRoleRightListAccordion').append($newCard);
+            }
+
+            // Remove parent card if no child rows left
+            if ($card.find('tbody tr').length === 0) {
+              $card.remove();
+            }
+          }
+        });
+      }
+
+    </script>
+
+  </body>
+
+  </html>
+
+</body>
+
+</html>
